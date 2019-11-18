@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en-us">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Hugo Tips (How to upload new post) | bmy4415 blog</title>
+
+
+
+<link rel="stylesheet" href="/css/style.css"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://bmy4415.github.io/posts/hugo-tips/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://bmy4415.github.io">
+          <h1 id="nav-heading" class="title is-4">bmy4415 blog</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile"></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">November 18, 2019</h2>
+    <h1 class="title">Hugo Tips (How to upload new post)</h1>
+    
+    <div class="content">
+      
+
+<h2 id="how-to-upload-new-post">How to upload new post</h2>
+
+<ol>
+<li><p>Create a markdown file using below command. You can find new find in <code>contents/posts/&lt;postname&gt;.md</code></p>
+
+<pre><code class="language-console">[18/11/19 7:26:22] ❯ hugo new posts/test-post.md
+/Users/bmy4415/Desktop/workspace/bmy4415_blog/content/posts/test-post.md created
+
+[18/11/19 7:29:03] ❯ tree content
+content
+└── posts
+├── hugo-tips.md
+├── my-first-post.md
+└── test-post.md
+
+1 directory, 3 files
+</code></pre></li>
+
+<li><p>Update <code>contents/posts/&lt;postname&gt;.md</code> file. You can check intermediate result on <code>localhost:1313</code> with below command.</p>
+
+<pre><code class="language-console">[18/11/19 7:26:34] ❯ hugo server -D
+
+               | EN
++------------------+----+
+Pages            | 12
+Paginator pages  |  0
+Non-page files   |  0
+Static files     | 13
+Processed images |  0
+Aliases          |  4
+Sitemaps         |  1
+Cleaned          |  0
+
+Total in 13 ms
+Watching for changes in /Users/bmy4415/Desktop/workspace/bmy4415_blog/{archetypes,content,data,layouts,static,themes}
+Watching for config changes in /Users/bmy4415/Desktop/workspace/bmy4415_blog/config.toml
+Environment: &quot;development&quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+
+Change detected, rebuilding site.
+2019-11-18 19:26:42.961 +0900
+Source changed &quot;/Users/bmy4415/Desktop/workspace/bmy4415_blog/content/posts/hugo-tips.md&quot;: WRITE
+Total in 17 ms
+</code></pre></li>
+
+<li><p>Remove <code>draft: true</code> line in <code>contents/posts/&lt;postname&gt;.md</code>. If you don&rsquo;t do this, <code>deploy.sh</code> will not deploy your post.</p>
+
+<pre><code class="language-console">[18/11/19 7:52:48] ❯ head content/posts/hugo-tips.md
+---
+title: &quot;Hugo Tips (How to upload new post)&quot;
+date: 2019-11-18T19:19:20+09:00
+draft: true
+---
+
+## How to upload new post
+
+1. Create a markdown file using blow command. You can find new find in `contents/posts/&lt;postname&gt;.md`
+</code></pre>
+
+<p>console</p>
+
+<pre><code>
+1. Deploy use `deploy.sh`.
+</code></pre>
+
+<p>console</p>
+
+<p>```</p>
+
+<h4 id="feel-free-to-make-questions-or-advices-to-me">Feel free to make questions or advices to me</h4></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+<script src="https://utteranc.es/client.js"
+        repo="bmy4415/bmy4415_blog_comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
