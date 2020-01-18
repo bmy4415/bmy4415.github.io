@@ -56,7 +56,7 @@
 <ol>
 <li><p>Create a markdown file using below command. You can find new file in <code>contents/posts/&lt;postname&gt;.md</code></p>
 
-<pre><code class="language-console">[18/11/19 7:26:22] ❯ hugo new posts/test-post.md
+<pre><code>[18/11/19 7:26:22] ❯ hugo new posts/test-post.md
 /Users/bmy4415/Desktop/workspace/bmy4415_blog/content/posts/test-post.md created
 
 [18/11/19 7:29:03] ❯ tree content
@@ -71,7 +71,7 @@ content
 
 <li><p>Update <code>contents/posts/&lt;postname&gt;.md</code> file. You can check intermediate result on <code>localhost:1313</code> with below command.</p>
 
-<pre><code class="language-console">[18/11/19 7:26:34] ❯ hugo server -D
+<pre><code>[18/11/19 7:26:34] ❯ hugo server -D
 
                | EN
 +------------------+----+
@@ -101,7 +101,7 @@ Total in 17 ms
 
 <li><p>Remove <code>draft: true</code> line in <code>contents/posts/&lt;postname&gt;.md</code>. If you don&rsquo;t do this, <code>deploy.sh</code> will not deploy your post.</p>
 
-<pre><code class="language-console">[18/11/19 7:52:48] ❯ head content/posts/hugo-tips.md
+<pre><code>[18/11/19 7:52:48] ❯ head content/posts/hugo-tips.md
 ---
 title: &quot;Hugo Tips (How to upload new post)&quot;
 date: 2019-11-18T19:19:20+09:00
@@ -113,7 +113,7 @@ draft: true
 
 <li><p>Deploy with <code>deploy.sh</code>.</p>
 
-<pre><code class="language-console">[18/11/19 7:56:08] ❯ ./deploy.sh
+<pre><code>[18/11/19 7:56:08] ❯ ./deploy.sh
 Deploying updates to GitHub...
 
                | EN
